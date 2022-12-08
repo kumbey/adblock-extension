@@ -1,5 +1,5 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Adblock Extension",
     "version": "1.0.0",
     "description": "Chrome Extension in Adblock!",
@@ -22,8 +22,15 @@
         }
     ],
     "permissions": [
-        "webRequest",
-        "webRequestBlocking",
-        "<all_urls>"
-    ]
+        "declarativeNetRequest"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset_1",
+                "enabled": true,
+                "path": "rules_1.json"
+            }
+        ]
+    }
 }
